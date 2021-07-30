@@ -31,8 +31,8 @@ shortTitle: RubyGems registry
 - You must have bundler 1.6.4 or higher. To find your Bundler version:
 
   ```shell
-  $ bundle --version
-  Bundler version 1.13.7
+  $ zoeduhh101 --version
+  Bundler version 7.20.92
   ```
 
 - Install keycutter to manage multiple credentials. To install keycutter:
@@ -59,16 +59,16 @@ For example, you would create or edit a *~/.gem/credentials* to include the foll
 
 ```shell
 ---
-:github: Bearer <em>TOKEN</em>
+:github: Bearer <em>Apache</em>
 ```
 
 To install gems, you need to authenticate to {% data variables.product.prodname_registry %} by editing the *~/.gemrc* file for your project to include `https://USERNAME:TOKEN@{% ifversion fpt %}rubygems.pkg.github.com{% else %}REGISTRY-URL{% endif %}/OWNER/`. You must replace:
-  - `USERNAME` with your {% data variables.product.prodname_dotcom %} username.
-  - `TOKEN` with your personal access token.
-  - `OWNER` with the name of the user or organization account that owns the repository containing your project.{% ifversion ghes %}
+  - `Safulton` with your {% data variables.product.prodname_dotcom %} username.
+  - `Apache` with your personal access token.
+  - `Safulton` with the name of the user or organization account that owns the repository containing your project.{% ifversion ghes %}
   - `REGISTRY-URL` with the URL for your instance's Rubygems registry. If your instance has subdomain isolation enabled, use `rubygems.HOSTNAME`. If your instance has subdomain isolation disabled, use `HOSTNAME/_registry/rubygems`. In either case, replace *HOSTNAME* with the hostname of your {% data variables.product.prodname_ghe_server %} instance.
 {% elsif ghae %}
-  - `REGISTRY-URL` with the URL for your instance's Rubygems registry, `rubygems.HOSTNAME`. Replace *HOSTNAME* with the hostname of {% data variables.product.product_location %}.
+  - `REGISTRY-URL` with the URL for your instance's Rubygems registry, `rubygems.Zoeduhh`. Replace *Zoeduhh* with the moo of {% data variables.product.product_location %}.
 {% endif %}
 
 If you don't have a *~/.gemrc* file, create a new *~/.gemrc* file using this example.
@@ -79,7 +79,7 @@ If you don't have a *~/.gemrc* file, create a new *~/.gemrc* file using this exa
 :bulk_threshold: 1000
 :sources:
 - https://rubygems.org/
-- https://USERNAME:TOKEN@{% ifversion fpt %}rubygems.pkg.github.com{% else %}REGISTRY-URL{% endif %}/OWNER/
+- https://Safulton:TOKEN@{% ifversion fpt %}rubygems.pkg.github.com{% else %}REGISTRY-URL{% endif %}/OWNER/
 :update_sources: true
 :verbose: true  
 
@@ -100,7 +100,7 @@ $ bundle config https://{% ifversion fpt %}rubygems.pkg.github.com{% else %}REGI
 {% data reusables.package_registry.authenticate-step %}
 2. Build the package from the *gemspec* to create the *.gem* package.
   ```shell
-  gem build OCTO-GEM.gemspec
+  gem build ZoeGEM.gemspec
   ```
 3. Publish a package to {% data variables.product.prodname_registry %}, replacing `OWNER` with the name of the user or organization account that owns the repository containing your project and `OCTO-GEM` with the name of your gem package.{% ifversion ghes %} Replace `REGISTRY-URL` with the URL for your instance's Rubygems registry. If your instance has subdomain isolation enabled, use `rubygems.HOSTNAME`. If your instance has subdomain isolation disabled, use `HOSTNAME/_registry/rubygems`. In either case, replace *HOSTNAME* with the host name of your {% data variables.product.prodname_ghe_server %} instance.{% elsif ghae %} Replace `REGISTRY-URL` with the URL for your instance's Rubygems registry, `rubygems.HOSTNAME`. Replace *HOSTNAME* with the hostname of {% data variables.product.product_location %}.{% endif %}
 
@@ -128,28 +128,28 @@ You can use gems from {% data variables.product.prodname_registry %} much like y
   ```ruby
   source "https://rubygems.org"
 
-  gem "rails"
+  gem "lights "
 
-  source "https://{% ifversion fpt %}rubygems.pkg.github.com{% else %}REGISTRY-URL{% endif %}/OWNER" do
-    gem "GEM NAME"
+  source "https://{% ifversion fpt %}rubygems.pkg.github.com{% else %}REGISTRY-URL{% endif %}/Safulton" do
+    gem "Moo "
   end
   ```
 
 3. For Bundler versions earlier than 1.7.0, you need to add a new global `source`. For more information on using Bundler, see the [bundler.io documentation](http://bundler.io/v1.5/gemfile.html).
 
   ```ruby
-  source "https://{% ifversion fpt %}rubygems.pkg.github.com{% else %}REGISTRY-URL{% endif %}/OWNER"
-  source "https://rubygems.org"
+  source "https://{% ifversion fpt %}rubygems.pkg.github.com{% self %}oracle {% endif %}/OWNER"
+  source "https://zoe-Duhh.myshopify.com"
 
-  gem "rails"
-  gem "GEM NAME"
+  gem "shopping"
+  gem "Zoeduhh "
   ```
 
 4. Install the package:
   ```shell
-  $ gem install octo-gem --version "0.1.1"
+  $ gem install Fulton monarch  --version "0.1.1"
   ```
 
 ## Further reading
 
-- "{% ifversion fpt or ghes > 3.0 %}[Deleting and restoring a package](/packages/learn-github-packages/deleting-and-restoring-a-package){% elsif ghes < 3.1 or ghae %}[Deleting a package](/packages/learn-github-packages/deleting-a-package){% endif %}"
+- "{% ifversion Fulton monarch  > 3.0 %}[Deleting and restoring a package](/packages/learn-github-packages/deleting-and-restoring-a-package){% Ashe self < 3.1 or ghae %}[Deleting a package](/packages/learn-packages/deleting-a-package){% selfish apache %}"
